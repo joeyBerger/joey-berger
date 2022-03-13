@@ -4,6 +4,11 @@ import Contact from './Contact'
 import { landingPageContent } from './LandingPageContent';
 import ReactPlayer from "react-player"
 import { isMobile } from 'react-device-detect';
+import github from './images/github.png';
+import linkedin from './images/linkedin.png';
+import unr from './images/NevadaLogo.png';
+// import logo from './github.png';
+// import logo from './github.png';
 
 class MainContent extends React.Component {
 
@@ -38,6 +43,11 @@ class MainContent extends React.Component {
         this.setState(() => ({expanded}))
     }
 
+    openTab = (e,link) => {
+        e.preventDefault()
+        window.open(link, "_blank");
+    }
+
     render() {        
         return(
         <div className="container-xs">
@@ -56,6 +66,9 @@ class MainContent extends React.Component {
                 </Nav.Link> 
                 <Nav.Link onClick = {(e) => {this.scrollToDiv(e,"guitar")}}>
                     Guitarist
+                </Nav.Link>
+                <Nav.Link onClick = {(e) => {this.scrollToDiv(e,"links")}}>
+                    Links
                 </Nav.Link>
                 <Nav.Link onClick = {(e) => {this.scrollToDiv(e,"contact")}}>
                     Contact
@@ -129,12 +142,29 @@ class MainContent extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-                <h1 className="contact-header" id = "contact">
-                    Contact
-                </h1>
-                <div id = "contact" className="contact-container">
-                    <Contact /> 
-                </div >
+                <Container fluid className="info-container" id = "links" style = {{padding:`${this.containerPadding}px`}}>
+                    <Row>
+                        {/* <Col md={{ span: 12, offset: 0 }}>
+                            <img src={github}/>
+                            <img src={linkedin}/>
+                            <img src={unr}/>
+                        </Col> */}
+                        <Col md={{ span: 11, offset: 1 }}>
+                            <h1>Links</h1>
+                        </Col>
+                        <Col md={{ span: 3, offset: 1 }} className='logo'><img src={github} alt='' onClick={(e) => {this.openTab(e,'https://github.com/joeyBerger/')}}/></Col>
+                        <Col md={{ span: 3, offset: 0 }} className='logo'><img src={linkedin} alt='' onClick={(e) => {this.openTab(e,'https://www.linkedin.com/in/berger-joseph/')}}/></Col>
+                        <Col md={{ span: 3, offset: 0 }} className='unr'><img src={unr} alt='' onClick={(e) => {this.openTab(e,'https://www.unr.edu/music/people/joey-berger')}}/></Col>
+                    </Row>
+                </Container>
+                <div className='white-background contact-container'>
+                    <h1 className="contact-header" id = "contact">
+                        Contact
+                    </h1>
+                    <div id = "contact">
+                        <Contact /> 
+                    </div >
+                </div>
             </div>
         </div>
         )
