@@ -210,8 +210,7 @@ li {
 
  img {
    max-width: 100px;
-   text-align: center;
-   margin-top: 50px;
+   margin-right: 50px;
    cursor: pointer;
  }
 
@@ -302,8 +301,9 @@ li {
 
 @media only screen and (max-width: 767px){
   img {
-    padding-right: 10px;
+    margin-right: 10px;
     max-width: 100px;
+    padding: 5px;
   }
 }
 

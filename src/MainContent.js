@@ -144,17 +144,17 @@ class MainContent extends React.Component {
                 </Container>
                 <Container fluid className="info-container" id = "links" style = {{padding:`${this.containerPadding}px`}}>
                     <Row>
-                        {/* <Col md={{ span: 12, offset: 0 }}>
-                            <img src={github}/>
-                            <img src={linkedin}/>
-                            <img src={unr}/>
-                        </Col> */}
                         <Col md={{ span: 11, offset: 1 }}>
                             <h1>Links</h1>
                         </Col>
-                        <Col md={{ span: 3, offset: 1 }} className='logo'><img src={github} alt='' onClick={(e) => {this.openTab(e,'https://github.com/joeyBerger/')}}/></Col>
-                        <Col md={{ span: 3, offset: 0 }} className='logo'><img src={linkedin} alt='' onClick={(e) => {this.openTab(e,'https://www.linkedin.com/in/berger-joseph/')}}/></Col>
-                        <Col md={{ span: 3, offset: 0 }} className='unr'><img src={unr} alt='' onClick={(e) => {this.openTab(e,'https://www.unr.edu/music/people/joey-berger')}}/></Col>
+                        <Col md={{ span: 11, offset: 2 }} className='d-flex justify-content-start'>
+                            <img src={github} alt='' onClick={(e) => {this.openTab(e,'https://github.com/joeyBerger/')}}></img>
+                            <img src={linkedin} alt='' onClick={(e) => {this.openTab(e,'https://www.linkedin.com/in/berger-joseph/')}}></img>
+                            <img src={unr} alt='' onClick={(e) => {this.openTab(e,'https://www.unr.edu/music/people/joey-berger')}}></img>
+                        </Col>
+                        {/* <Col md={{ span: 3, offset: 1 }} className='logo'><img src={github} alt='' onClick={(e) => {this.openTab(e,'https://github.com/joeyBerger/')}}/></Col> */}
+                        {/* <Col md={{ span: 3 }} className='logo'><img src={linkedin} alt='' onClick={(e) => {this.openTab(e,'https://www.linkedin.com/in/berger-joseph/')}}/></Col> */}
+                        {/* <Col md={{ span: 3 }} className='unr'><img src={unr} alt='' onClick={(e) => {this.openTab(e,'https://www.unr.edu/music/people/joey-berger')}}/></Col> */}
                     </Row>
                 </Container>
                 <div className='white-background contact-container'>
