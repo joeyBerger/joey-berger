@@ -218,11 +218,6 @@ li {
     max-width: 100px;
  }
 
- .unr {
-    max-width: 100px;
-    padding-top: 15px;
-    transform: scale(1.2,1.2);
- }
 
 .fade-in {
     animation: fadeIn ease 6s;

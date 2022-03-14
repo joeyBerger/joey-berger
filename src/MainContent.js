@@ -6,9 +6,12 @@ import ReactPlayer from "react-player"
 import { isMobile } from 'react-device-detect';
 import github from './images/github.png';
 import linkedin from './images/linkedin.png';
-import unr from './images/NevadaLogo.png';
-// import logo from './github.png';
-// import logo from './github.png';
+// import unr from './images/NevadaLogo.png';
+import unr from './images/unr.png';
+import guitarMult from './images/guitar-mult.png'
+import oldEKG from './images/old-ekg.png'
+
+
 
 class MainContent extends React.Component {
 
@@ -107,7 +110,14 @@ class MainContent extends React.Component {
                         <Col md={{ span: 11, offset: 1 }}>
                             <h1>{landingPageContent.software.header}</h1>
                             <ul>
-                                {landingPageContent.software.listContent.map(l => <li key ={l}>{l}</li>)}
+                                {landingPageContent.software.listContent.map(l => {
+                                        if (l.includes('Guitar Mult')) {
+                                            return <li>iOS developer for personal projects and clients. <a href='https://apps.apple.com/us/app/guitar-mult/id1533512980'>Guitar Mult</a> and <a href='https://apps.apple.com/us/app/old-ekg/id1448210793'>Old EKG</a> among apps I have engineered.</li>
+                                        } else {
+                                            return <li key ={l}>{l}</li>
+                                        }                                        
+                                    }                                    
+                                )}
                             </ul>
                             <Container>
                                 <Row className='media-container'>
@@ -148,13 +158,14 @@ class MainContent extends React.Component {
                             <h1>Links</h1>
                         </Col>
                         <Col md={{ span: 11, offset: 2 }} className='d-flex justify-content-start'>
-                            <img src={github} alt='' onClick={(e) => {this.openTab(e,'https://github.com/joeyBerger/')}}></img>
-                            <img src={linkedin} alt='' onClick={(e) => {this.openTab(e,'https://www.linkedin.com/in/berger-joseph/')}}></img>
-                            <img src={unr} alt='' onClick={(e) => {this.openTab(e,'https://www.unr.edu/music/people/joey-berger')}}></img>
+                            <img src={github} alt='Github' onClick={(e) => {this.openTab(e,'https://github.com/joeyBerger/')}}></img>
+                            <img src={linkedin} alt='LinkedIn' onClick={(e) => {this.openTab(e,'https://www.linkedin.com/in/berger-joseph/')}}></img>
+                            <img src={unr} alt='UNR' onClick={(e) => {this.openTab(e,'https://www.unr.edu/music/people/joey-berger')}}></img>
                         </Col>
-                        {/* <Col md={{ span: 3, offset: 1 }} className='logo'><img src={github} alt='' onClick={(e) => {this.openTab(e,'https://github.com/joeyBerger/')}}/></Col> */}
-                        {/* <Col md={{ span: 3 }} className='logo'><img src={linkedin} alt='' onClick={(e) => {this.openTab(e,'https://www.linkedin.com/in/berger-joseph/')}}/></Col> */}
-                        {/* <Col md={{ span: 3 }} className='unr'><img src={unr} alt='' onClick={(e) => {this.openTab(e,'https://www.unr.edu/music/people/joey-berger')}}/></Col> */}
+                        <Col style={{marginTop:'40px'}} md={{ span: 11, offset: 2 }} className='d-flex justify-content-start'>
+                            <img src={guitarMult} alt='Guitar Mult' onClick={(e) => {this.openTab(e,'https://apps.apple.com/us/app/guitar-mult/id1533512980/')}}></img>
+                            <img src={oldEKG} alt='Old EKG' onClick={(e) => {this.openTab(e,'https://apps.apple.com/us/app/old-ekg/id1448210793/')}}></img>
+                        </Col>
                     </Row>
                 </Container>
                 <div className='white-background contact-container'>
