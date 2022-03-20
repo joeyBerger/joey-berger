@@ -176,6 +176,7 @@
  .contact-container {
     color: rgb(87, 89, 91);
     /* color: black */
+    color: white;
  }
 
 .contact-header {
@@ -216,6 +217,16 @@ li {
 
  .logo {
     max-width: 100px;
+ }
+
+ .stack-container {
+   margin-bottom: 20px;
+ }
+
+ .stack {
+   max-width: 60px;
+   max-height: 60px;
+   margin-right: 25px;
  }
 
 

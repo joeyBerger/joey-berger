@@ -11,7 +11,7 @@ import unr from './images/unr.png';
 import guitarMult from './images/guitar-mult.png'
 import oldEKG from './images/old-ekg.png'
 
-
+import Stacks from './Stacks';
 
 class MainContent extends React.Component {
 
@@ -72,6 +72,9 @@ class MainContent extends React.Component {
                 </Nav.Link>
                 <Nav.Link onClick = {(e) => {this.scrollToDiv(e,"links")}}>
                     Links
+                </Nav.Link>
+                <Nav.Link onClick = {(e) => {this.scrollToDiv(e,"stacks")}}>
+                    Stacks/Languages
                 </Nav.Link>
                 <Nav.Link onClick = {(e) => {this.scrollToDiv(e,"contact")}}>
                     Contact
@@ -168,7 +171,15 @@ class MainContent extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-                <div className='white-background contact-container'>
+                <Container fluid className="info-container white-background" id = "stacks" style = {{padding:`${this.containerPadding}px`}}>
+                    <Row>
+                        <Col md={{ span: 11, offset: 1 }}>
+                            <h1>Stacks/Languages</h1>
+                        </Col>
+                        <Stacks/>
+                    </Row>
+                </Container>
+                <div className='contact-container'>
                     <h1 className="contact-header" id = "contact">
                         Contact
                     </h1>
