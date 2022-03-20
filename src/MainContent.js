@@ -4,14 +4,10 @@ import Contact from './Contact'
 import { landingPageContent } from './LandingPageContent';
 import ReactPlayer from "react-player"
 import { isMobile } from 'react-device-detect';
-import github from './images/github.png';
-import linkedin from './images/linkedin.png';
-// import unr from './images/NevadaLogo.png';
-import unr from './images/unr.png';
-import guitarMult from './images/guitar-mult.png'
-import oldEKG from './images/old-ekg.png'
+
 
 import Stacks from './Stacks';
+import Links from './Links'
 
 class MainContent extends React.Component {
 
@@ -160,15 +156,7 @@ class MainContent extends React.Component {
                         <Col md={{ span: 11, offset: 1 }}>
                             <h1>Links</h1>
                         </Col>
-                        <Col md={{ span: 11, offset: 2 }} className='d-flex justify-content-start'>
-                            <img src={github} alt='Github' onClick={(e) => {this.openTab(e,'https://github.com/joeyBerger/')}}></img>
-                            <img src={linkedin} alt='LinkedIn' onClick={(e) => {this.openTab(e,'https://www.linkedin.com/in/berger-joseph/')}}></img>
-                            <img src={unr} alt='UNR' onClick={(e) => {this.openTab(e,'https://www.unr.edu/music/people/joey-berger')}}></img>
-                        </Col>
-                        <Col style={{marginTop:'40px'}} md={{ span: 11, offset: 2 }} className='d-flex justify-content-start'>
-                            <img src={guitarMult} alt='Guitar Mult' onClick={(e) => {this.openTab(e,'https://apps.apple.com/us/app/guitar-mult/id1533512980/')}}></img>
-                            <img src={oldEKG} alt='Old EKG' onClick={(e) => {this.openTab(e,'https://apps.apple.com/us/app/old-ekg/id1448210793/')}}></img>
-                        </Col>
+                        <Links/>
                     </Row>
                 </Container>
                 <Container fluid className="info-container white-background" id = "stacks" style = {{padding:`${this.containerPadding}px`}}>
