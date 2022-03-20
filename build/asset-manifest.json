@@ -1,30 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.7f027b93.chunk.css",
-    "main.js": "/static/js/main.4f728e1b.chunk.js",
-    "main.js.map": "/static/js/main.4f728e1b.chunk.js.map",
+    "main.css": "/static/css/main.e15dda20.chunk.css",
+    "main.js": "/static/js/main.fb70e43b.chunk.js",
+    "main.js.map": "/static/js/main.fb70e43b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.501e8616.js",
     "runtime-main.js.map": "/static/js/runtime-main.501e8616.js.map",
     "static/css/2.d6008dad.chunk.css": "/static/css/2.d6008dad.chunk.css",
-    "static/js/2.0c7f7486.chunk.js": "/static/js/2.0c7f7486.chunk.js",
-    "static/js/2.0c7f7486.chunk.js.map": "/static/js/2.0c7f7486.chunk.js.map",
+    "static/js/2.c54d9af0.chunk.js": "/static/js/2.c54d9af0.chunk.js",
+    "static/js/2.c54d9af0.chunk.js.map": "/static/js/2.c54d9af0.chunk.js.map",
     "static/js/3.0feb2751.chunk.js": "/static/js/3.0feb2751.chunk.js",
     "static/js/3.0feb2751.chunk.js.map": "/static/js/3.0feb2751.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.d6008dad.chunk.css.map": "/static/css/2.d6008dad.chunk.css.map",
-    "static/css/main.7f027b93.chunk.css.map": "/static/css/main.7f027b93.chunk.css.map",
-    "static/js/2.0c7f7486.chunk.js.LICENSE.txt": "/static/js/2.0c7f7486.chunk.js.LICENSE.txt",
+    "static/css/main.e15dda20.chunk.css.map": "/static/css/main.e15dda20.chunk.css.map",
+    "static/js/2.c54d9af0.chunk.js.LICENSE.txt": "/static/js/2.c54d9af0.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/MainImage_Mobile.32215f97.jpg",
+    "static/media/cplusplus.a7d629db.png": "/static/media/cplusplus.a7d629db.png",
     "static/media/github.ecf329c2.png": "/static/media/github.ecf329c2.png",
     "static/media/guitar-mult.8159b2a8.png": "/static/media/guitar-mult.8159b2a8.png",
     "static/media/linkedin.21f0f510.png": "/static/media/linkedin.21f0f510.png",
-    "static/media/old-ekg.035f4d62.png": "/static/media/old-ekg.035f4d62.png"
+    "static/media/old-ekg.035f4d62.png": "/static/media/old-ekg.035f4d62.png",
+    "static/media/react.c86e74c1.png": "/static/media/react.c86e74c1.png"
   },
   "entrypoints": [
     "static/js/runtime-main.501e8616.js",
     "static/css/2.d6008dad.chunk.css",
-    "static/js/2.0c7f7486.chunk.js",
-    "static/css/main.7f027b93.chunk.css",
-    "static/js/main.4f728e1b.chunk.js"
+    "static/js/2.c54d9af0.chunk.js",
+    "static/css/main.e15dda20.chunk.css",
+    "static/js/main.fb70e43b.chunk.js"
   ]
 }
