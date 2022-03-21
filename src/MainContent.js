@@ -10,15 +10,34 @@ class MainContent extends React.Component {
         super(props)
         this.state = {
             expanded : false,
+            reactPlayerDimensions : this.returnReactPlayerDimensions()            
         }
         
+        window.addEventListener('resize', () => {
+            console.log('resizing',window.innerWidth)
+            this.setState(() => ({
+                reactPlayerDimensions : this.returnReactPlayerDimensions()
+            }))
+        });
+
         this.containerPadding = 50;
+        this.categories = {
+            software : 'Software Engineer',
+            sound : 'Composition/Sound Design',
+            guitar : 'Guitarist',
+            links : 'Links',
+            stacks : 'Stacks/Languages',
+            contact : 'Contact',
+        }
+    }
+
+    returnReactPlayerDimensions = () => {
         const width = isMobile ? window.innerWidth * .7 : 500
-        this.reactPlayerDimensions = {
+        return {
             width : `${width}px`,
             height : width*.75,
         }
-    }    
+    }
 
     scrollToDiv = (e,id) => {
         e.preventDefault();
@@ -37,15 +56,6 @@ class MainContent extends React.Component {
         this.setState(() => ({expanded}))
     }
 
-    categories = {
-        software : 'Software Engineer',
-        sound : 'Composition/Sound Design',
-        guitar : 'Guitarist',
-        links : 'Links',
-        stacks : 'Stacks/Languages',
-        contact : 'Contact',
-    }
-
     render() {        
         return(
         <div className="container-xs">
@@ -53,7 +63,7 @@ class MainContent extends React.Component {
             <Landing isMobile={isMobile}/>
             <div className="scrollable-container">
                 {Object.keys(this.categories).map((c,i) => 
-                    <CategoryComponent id={c} containerPadding={this.containerPadding} reactPlayerDimensions={this.reactPlayerDimensions} idx={i} key={c.substring(1)}/>
+                    <CategoryComponent id={c} containerPadding={this.containerPadding} reactPlayerDimensions={this.state.reactPlayerDimensions} idx={i} key={c.substring(1)}/>
                 )}
             </div>
         </div>
