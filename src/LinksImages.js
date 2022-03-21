@@ -1,12 +1,10 @@
-import github from './images/github.png';
-import linkedin from './images/linkedin.png';
-import unr from './images/unr.png';
-import guitarMult from './images/guitar-mult.png'
-import oldEKG from './images/old-ekg.png'
-
+import github from './images/links/github.png';
+import linkedin from './images/links/linkedin.png';
+import unr from './images/links/unr.png';
+import guitarMult from './images/links/guitar-mult.png'
+import oldEKG from './images/links/old-ekg.png'
 
 const linkImages = {}
-
 linkImages[github] = {alt : 'github', link: 'https://github.com/joeyBerger/'}
 linkImages[linkedin] = {alt : 'linkedin', link: 'https://www.linkedin.com/in/berger-joseph/'}
 linkImages[unr] = {alt : 'unr', link: 'https://www.unr.edu/music/people/joey-berger'}
