@@ -4,8 +4,6 @@ import Contact from './Contact'
 import { landingPageContent } from './LandingPageContent';
 import ReactPlayer from "react-player"
 import { isMobile } from 'react-device-detect';
-
-
 import Stacks from './Stacks';
 import Links from './Links'
 
@@ -40,11 +38,6 @@ class MainContent extends React.Component {
     setNavBarExpanded = (e,expanded) => {
         if (e) e.preventDefault()
         this.setState(() => ({expanded}))
-    }
-
-    openTab = (e,link) => {
-        e.preventDefault()
-        window.open(link, "_blank");
     }
 
     render() {        

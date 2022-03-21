@@ -18,7 +18,7 @@
 }
 
 .background-img {
-    background-image : url("images/MainImage.jpg");
+    background-image : url("images/landing/MainImage.jpg");
     min-height: 733px;
     background-attachment: fixed;
     background-position: center;
@@ -319,7 +319,7 @@ li {
     }
 
     .background-img {
-        background-image : url("images/MainImage.jpg");
+        background-image : url("images/landing/MainImage.jpg");
         min-height: 733px;
         background-attachment: fixed;
         background-position: 60% 0%;
@@ -331,7 +331,7 @@ li {
     }
 
     .mobile-source {
-        background-image : url("images/MainImage_Mobile.jpg");
+        background-image : url("images/landing/MainImage_Mobile.jpg");
         background-size: contain;
         background-size: stretch;
         min-height: 700px;
