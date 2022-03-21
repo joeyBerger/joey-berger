@@ -5,6 +5,7 @@ import { landingPageContent } from './LandingPageContent';
 import ReactPlayer from "react-player"
 import { isMobile } from 'react-device-detect';
 import Landing from './Landing'
+import CategoryComponent from './CategoryComponent'
 import CustomNavbar from './CustomNavbar';
 import Stacks from './Stacks';
 import Links from './Links'
@@ -51,13 +52,19 @@ class MainContent extends React.Component {
         contact : 'Contact',
     }
 
+    components = [
+        // {software : }
+    ]
+
     render() {        
         return(
         <div className="container-xs">
             <CustomNavbar scrollToDiv={this.scrollToDiv} setNavBarExpanded={this.setNavBarExpanded} expanded={this.state.expanded} categories={this.categories}/>
             <Landing isMobile={isMobile}/>
             <div className="scrollable-container">
-                <Container fluid className="info-container white-background" id = "software" style = {{padding:`${this.containerPadding}px`}}>
+                {/* {Object.keys()} */}
+                <CategoryComponent id='software' containerPadding={this.containerPadding} reactPlayerDimensions={this.reactPlayerDimensions} idx={0}/>
+                {/* <Container fluid className="info-container white-background" id = "software" style = {{padding:`${this.containerPadding}px`}}>
                     <Row>
                         <Col md={{ span: 11, offset: 1 }}>
                             <h1>{landingPageContent.software.header}</h1>
@@ -77,7 +84,7 @@ class MainContent extends React.Component {
                             </Container>
                         </Col>
                     </Row>
-                </Container>
+                </Container> */}
                 <Container fluid className="info-container" id = "sound" style = {{padding:`${this.containerPadding}px`}}>
                     <Row>
                         <Col md={{ span: 11, offset: 1 }}>
