@@ -62,8 +62,10 @@ class MainContent extends React.Component {
             <CustomNavbar scrollToDiv={this.scrollToDiv} setNavBarExpanded={this.setNavBarExpanded} expanded={this.state.expanded} categories={this.categories}/>
             <Landing isMobile={isMobile}/>
             <div className="scrollable-container">
-                {/* {Object.keys()} */}
-                <CategoryComponent id='software' containerPadding={this.containerPadding} reactPlayerDimensions={this.reactPlayerDimensions} idx={0}/>
+                {Object.keys(this.categories).map((c,i) => {                
+                    return <CategoryComponent id={c} containerPadding={this.containerPadding} reactPlayerDimensions={this.reactPlayerDimensions} idx={i}/>
+                })}
+                {/* <CategoryComponent id='software' containerPadding={this.containerPadding} reactPlayerDimensions={this.reactPlayerDimensions} idx={0}/> */}
                 {/* <Container fluid className="info-container white-background" id = "software" style = {{padding:`${this.containerPadding}px`}}>
                     <Row>
                         <Col md={{ span: 11, offset: 1 }}>
@@ -85,7 +87,7 @@ class MainContent extends React.Component {
                         </Col>
                     </Row>
                 </Container> */}
-                <Container fluid className="info-container" id = "sound" style = {{padding:`${this.containerPadding}px`}}>
+                {/* <Container fluid className="info-container" id = "sound" style = {{padding:`${this.containerPadding}px`}}>
                     <Row>
                         <Col md={{ span: 11, offset: 1 }}>
                             <h1>{landingPageContent.sound.header}</h1>
@@ -126,6 +128,8 @@ class MainContent extends React.Component {
                         <Stacks/>
                     </Row>
                 </Container>
+
+                
                 <Container fluid className="info-container" id = "contact" style = {{padding:`${this.containerPadding}px`}}>
                     <Row>
                         <Col md={{ span: 11, offset: 1 }}>
@@ -133,7 +137,7 @@ class MainContent extends React.Component {
                         </Col>
                         <Contact /> 
                     </Row>
-                </Container>
+                </Container> */}
             </div>
         </div>
         )

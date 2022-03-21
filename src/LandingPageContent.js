@@ -36,6 +36,18 @@ const landingPageContent = {
             'Professional musician for 17 years, playing across the US as a hired musician.',
             'Adjunct Faculty at the University of Nevada, Reno for 12 years.'
         ]
+    },
+    links : {
+        header : 'Links',
+        listContent : 'images'
+    },
+    stacks : {
+        header: 'Stacks/Languages',
+        listContent : 'images'
+    },
+    contact : {
+        header: 'Contact',
+        listContent : 'contact'
     }
 }
 
