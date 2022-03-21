@@ -119,14 +119,14 @@ class MainContent extends React.Component {
                         <Stacks/>
                     </Row>
                 </Container>
-                <div className='contact-container'>
-                    <h1 className="contact-header" id = "contact">
-                        Contact
-                    </h1>
-                    <div id = "contact">
+                <Container fluid className="info-container" id = "contact" style = {{padding:`${this.containerPadding}px`}}>
+                    <Row>
+                        <Col md={{ span: 11, offset: 1 }}>
+                            <h1>Contact</h1>
+                        </Col>
                         <Contact /> 
-                    </div >
-                </div>
+                    </Row>
+                </Container>
             </div>
         </div>
         )
