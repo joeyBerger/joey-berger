@@ -32,7 +32,7 @@ class MainContent extends React.Component {
     }
 
     returnReactPlayerDimensions = () => {
-        const width = isMobile ? window.innerWidth * .7 : 500//500
+        const width = isMobile ? window.innerWidth * .7 : window.innerWidth >= 600 ? 500 : window.innerWidth*.76
         return {
             width : `${width}px`,
             height : width*.75,
