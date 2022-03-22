@@ -34,13 +34,47 @@
 
 .img-test {
   pointer-events: none;
-  position: relative;
+  /* position: relative; */
   min-width: 100%;
   offset: 400px;
   /* min-height: 100vh; */
   min-height: 100%;
   z-index: -1;
   object-fit: cover;
+
+
+}
+
+.shimmer {
+  -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+  /* background-repeat: no-repeat; */
+  animation: shimmer 10.5s, fadeIn ease 6s;
+  animation-fill-mode: forwards;
+}
+
+.img-test-anim {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation: scale 4000ms ease-in-out forwards;
+  z-index: 10000;
+  /* transform: scale(4); */
+}
+
+@keyframes shimmer {
+  100% {-webkit-mask-position:left}
+}
+
+@keyframes scale {
+  /* to {
+    transform: scale(1.2);
+  } */
+  0% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .image-container {
@@ -363,12 +397,4 @@ li {
         min-height: 700px;
         width: 100%;
     }
-
-    /* img {
-      padding-right: 10px;
-    } */
-
-    /* .media {
-        padding: 5px 5px 15px;
-     } */
 }

@@ -1,18 +1,23 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
-import image from './images/landing/MainImage.jpg'
+import image from './images/landing/MainImage_NoJB.png'
+import cutout from './images/landing/MainImage_Cutout.png'
+
 
 const Landing = (props) => {
     return (
         <>
             <div className="image-container">
                 {/* <div className = {`background-img ${props.isMobile ? 'mobile-source' : ''} fade-in`}></div> */}
-                <div className = {`background-img ${props.isMobile ? 'mobile-source' : ''} fade-in`}>
+                <div className = {`background-img ${props.isMobile ? 'mobile-source' : ''}`}>
                     <div style={{position:'fixed',height:'100%',width:'100%'}}>
-                        <img src={image} alt='test' className='img-test'></img>
+                        <img src={image} alt='test' className='img-test shimmer'></img>
+                        <img src={cutout} alt='test' className='img-test img-test-anim'></img>
+
+                        
                     </div>                     
                 </div>                
-                <Container fluid className="centered">
+                <Container className="centered">
                     <Row>
                         <Col sm={12} lg={12} className="d-none d-xl-block centered">
                             Joey Berger
