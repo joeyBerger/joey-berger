@@ -6,12 +6,12 @@ const Landing = (props) => {
     return (
         <>
             <div className="image-container">
+                {/* <div className = {`background-img ${props.isMobile ? 'mobile-source' : ''} fade-in`}></div> */}
                 <div className = {`background-img ${props.isMobile ? 'mobile-source' : ''} fade-in`}>
                     <div style={{position:'fixed',height:'100%',width:'100%'}}>
                         <img src={image} alt='test' className='img-test'></img>
-                    </div>
-                     
-                </div>
+                    </div>                     
+                </div>                
                 <Container fluid className="centered">
                     <Row>
                         <Col sm={12} lg={12} className="d-none d-xl-block centered">
