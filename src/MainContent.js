@@ -14,7 +14,6 @@ class MainContent extends React.Component {
         }
         
         window.addEventListener('resize', () => {
-            console.log('resizing',window.innerWidth)
             this.setState(() => ({
                 reactPlayerDimensions : this.returnReactPlayerDimensions()
             }))
