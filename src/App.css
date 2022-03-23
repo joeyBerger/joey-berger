@@ -96,7 +96,7 @@
 }
 
 .centered {
-    position: fixed;
+    /* position: fixed; */
     left: -15%;
     font-family: "Helvetica Neue";
     font-size: 60px;
@@ -105,7 +105,6 @@
 }
 
 .centered-lg {
-    position: fixed;
     top: 50%;
     left: 40%;
     transform: translate(-50%, -50%);
@@ -114,7 +113,6 @@
 }
 
 .centered-md {
-    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -124,7 +122,6 @@
 
 
 .centered-sm {
-    position: fixed;
     top: 80%;
     left: 20%;
     transform: translate(-50%, -100%);
@@ -134,7 +131,6 @@
 
 
 .centered-xs {
-    position: fixed;
     top: 80%;
     left: 20%;
     transform: translate(-50%, -100%);
@@ -157,7 +153,6 @@
 }
 
 .scrollable-container {
-    /* height:1500px; */
     height:100%;
     background-color:rgb(87, 89, 91);
     z-index: 1;
@@ -169,7 +164,6 @@
 
  .info-container {
      color: floralwhite;
-     /* padding: 50px; */
  }
 
  .white-background {
@@ -183,7 +177,6 @@
  }
 
  .form-group {
-     /* color: rgb(255, 255, 255); */
      padding: 0px 10px 20px 10px;
  }
 

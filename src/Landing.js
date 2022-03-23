@@ -3,11 +3,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 import image from './images/landing/MainImage_NoJB.png'
 import cutout from './images/landing/MainImage_Cutout.png'
 
-
 const Landing = (props) => {
     setTimeout(() => {
         const elem = document.getElementById('background-image')
-        // elem
         elem.classList.remove('shimmer');
         elem.classList.add('shimmer-idle');
     },15000)
@@ -23,12 +21,12 @@ const Landing = (props) => {
                 </div>                
                 <Container className='title'>
                     <Row>
-                        {/* <Col xl={12} className="d-none d-xl-block centered">
+                        <Col xl={12} className="d-none d-xl-block centered">
                             Joey Berger
                             <div className="header-subtext">Software Engineer - Sound Designer - Composer - Guitarist</div>
                         </Col>
                         <Col lg={12} className="d-none d-lg-block d-xl-none centered-lg">
-                            Joey Berger
+                            Joey Berger s
                             <div className="header-subtext">Software Engineer - Sound Designer - Composer - Guitarist</div>
                         </Col>
                         <Col sm={12} className="d-none d-md-block d-lg-none centered-md">
@@ -39,24 +37,6 @@ const Landing = (props) => {
                             Joey Berger
                         </Col>
                         <Col xs={{offset:1}} className="d-none d-xs-block d-sm-none centered-sm">
-                            Joey Berger
-                        </Col> */}
-                        <Col sm={12} lg={12} className="d-none d-xl-block centered">
-                            Joey Berger
-                        <div className="header-subtext">Software Engineer - Sound Designer - Composer - Guitarist</div>
-                        </Col>
-                        <Col sm={12} lg={12} className="d-none d-lg-block d-xl-none centered-lg">
-                            Joey Berger
-                        <div className="header-subtext">Software Engineer - Sound Designer - Composer - Guitarist</div>
-                        </Col>
-                        <Col sm={12} lg={12} className="d-none d-md-block d-lg-none centered-md">
-                            Joey Berger
-                        <div className="header-subtext-md">Software Engineer - Sound Designer - Composer - Guitarist</div>
-                        </Col>
-                        <Col xs={12} className="d-none d-sm-block d-md-none centered-sm">
-                            Joey Berger
-                        </Col>
-                        <Col xs={12} className="d-none d-xs-block d-sm-none centered-xs">
                             Joey Berger
                         </Col>
                     </Row>
