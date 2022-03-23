@@ -46,10 +46,20 @@
 }
 
 .shimmer {
-  -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+  -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/500% 100%;
   /* background-repeat: no-repeat; */
-  animation: shimmer 10.5s, fadeIn ease 6s;
+  /* animation: shimmer 10.5s, fadeIn ease 6s; */
+  /* animation: shimmer 10.5s, fadeIn ease 6s; */
+  animation: shimmer 15s, fadeIn ease 6s;
   animation-fill-mode: forwards;
+}
+
+.shimmer-idle {
+  -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/500% 100%;
+  /* background-repeat: no-repeat; */
+  /* animation: shimmer 10.5s, fadeIn ease 6s; */
+  animation: shimmer 15s infinite;
+  /* animation-fill-mode: repeat; */
 }
 
 .img-test-anim {
@@ -87,16 +97,16 @@
     /* position: absolute; */
     position: fixed;
 
-    background-size: cover;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
+    /* background-size: cover; */
+    /* top: 10%; */
+    left: -15%;
+    /* transform: translate(-50%, -60%); */
     font-family: "Helvetica Neue";
     font-size: 60px;
     z-index: -1;
-
     width: 100%;
-    padding: 20px;
+    padding-bottom: 100px;
+    
     /* color: rgb(255, 128, 0); */
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px #010000;
@@ -105,17 +115,16 @@
 .centered-lg {
     /* position: absolute; */
     position: fixed;
-
-    background-size: cover;
+    /* background-size: cover; */
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
     font-family: "Helvetica Neue";
     font-size: 60px;
     z-index: -1;
-
-    width: 100%;
-    padding: 20px;
+    /* text-align: center; */
+    /* width: 100%; */
+    padding-bottom: 20px;
     /* color: rgb(255, 128, 0); */
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px #010000;
@@ -360,7 +369,11 @@ li {
   img {
     margin-right: 10px;
     max-width: 100px;
-    /* padding: 5px; */
+    padding: 5px;
+  }
+
+  .img-test {
+    padding: 0px;
   }
 }
 
@@ -383,11 +396,23 @@ li {
 
     .img-test {
       position: relative;
-      right: 250px;
+      right: 350px;
+      /* bottom: 50px; */
       min-height: 100%;
       object-fit: cover;
-      min-width: 150%;
+      min-width: 200%;
       display: inline-block;
+      padding: 0px;
+    }
+
+    .img-test-anim {
+      position: absolute;
+      left: -400px;
+      top: 0px;
+      /* margin-right: 150px; */
+      /* left: 0px; */
+      min-width: 200%;
+      /* transform: scale(4); */
     }
 
     .mobile-source {
