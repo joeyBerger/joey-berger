@@ -47,19 +47,14 @@
 
 .shimmer {
   -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/500% 100%;
-  /* background-repeat: no-repeat; */
-  /* animation: shimmer 10.5s, fadeIn ease 6s; */
-  /* animation: shimmer 10.5s, fadeIn ease 6s; */
+  /* -webkit-mask:linear-gradient(-60deg,rgb(71, 71, 71) 30%,rgba(141, 141, 141, 0.333),rgb(138, 138, 138) 70%) right/500% 100%; */
   animation: shimmer 15s, fadeIn ease 6s;
   animation-fill-mode: forwards;
 }
 
 .shimmer-idle {
   -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/500% 100%;
-  /* background-repeat: no-repeat; */
-  /* animation: shimmer 10.5s, fadeIn ease 6s; */
   animation: shimmer 15s infinite;
-  /* animation-fill-mode: repeat; */
 }
 
 .img-test-anim {
@@ -134,7 +129,7 @@
     left: 20%;
     transform: translate(-50%, -100%);
     font-size: 40px;
-    padding: 20px;
+    padding: 50px;
 }
 
 
@@ -357,7 +352,6 @@ li {
     }
 
     .img-test {
-      position: relative;
       right: 350px;
       /* bottom: 50px; */
       min-height: 100%;
@@ -368,7 +362,6 @@ li {
     }
 
     .img-test-anim {
-      position: absolute;
       left: -400px;
       top: 0px;
       /* margin-right: 150px; */
@@ -378,10 +371,36 @@ li {
     }
 
     .mobile-source {
-        background-image : url("images/landing/MainImage_Mobile.jpg");
+        /* background-image : url("images/landing/MainImage_Mobile.jpg"); */
         background-size: contain;
         background-size: stretch;
-        min-height: 700px;
-        width: 100%;
+        min-height: 600px;
+        /* width: 100%; */
+        min-width: 100%;
     }
+
+    .mobile-anim {
+      left: -300px;
+    }
+}
+
+@media only screen and (max-width: 385px){
+  .img-test {
+    right: 350px;
+    /* bottom: 50px; */
+    min-height: 100%;
+    object-fit: cover;
+    min-width: 200%;
+    display: inline-block;
+    padding: 0px;
+  }
+
+  .img-test-anim {
+    left: -500px;
+    top: 0px;
+    /* margin-right: 150px; */
+    /* left: 0px; */
+    min-width: 300%;
+    /* transform: scale(4); */
+  }
 }
