@@ -160,6 +160,7 @@ cursor: pointer;
     height:100%;
     background-color:rgb(87, 89, 91);
     z-index: 1;
+    overflow-y: hidden;
 }   
 
 .jumbotron-override {
@@ -315,7 +316,7 @@ label {
 
 @media only screen and (max-width: 575px){
     .container-xs {
-        overflow-x: auto;    
+        overflow-x: auto;
     }
 
     .background-img {
