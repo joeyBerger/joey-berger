@@ -28,10 +28,6 @@ class MainContent extends React.Component {
             stacks : 'Stacks/Languages',
             contact : 'Contact',
         }
-
-        window.onscroll = function () {
-            window.scrollLeft = 0;
-        }
     }
 
     returnReactPlayerDimensions = () => {

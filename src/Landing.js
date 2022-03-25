@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
-import image from './images/landing/MainImage_NoJB.png'
+import background from './images/landing/MainImage_NoJB.jpeg'
 import cutout from './images/landing/MainImage_Cutout.png'
 
 const Landing = (props) => {
@@ -12,11 +12,10 @@ const Landing = (props) => {
     return (
         <>
             <div className="image-container">
-                {/* <div className = {`background-img ${props.isMobile ? 'mobile-source' : ''} fade-in`}></div> */}
                 <div className = {`background-img ${props.isMobile ? 'mobile-source' : ''}`}>
                     <div style={{position:'fixed',height:'100%',width:'100%'}}>
-                        <img src={image} alt='test' className='img-test shimmer' id='background-image'></img>
-                        <img src={cutout} alt='test' className={`img-test img-test-anim ${props.isMobile ? 'mobile-anim' : ''}`}></img>                        
+                        <img src={background} alt='background' className='landing-image shimmer' id='background-image'></img>
+                        <img src={cutout} alt='cutout' className={`landing-image landing-image-anim ${props.isMobile ? 'mobile-anim' : ''}`}></img>                        
                     </div>                     
                 </div>                
                 <Container className='title'>
@@ -26,14 +25,14 @@ const Landing = (props) => {
                             <div className="header-subtext">Software Engineer - Sound Designer - Composer - Guitarist</div>
                         </Col>
                         <Col lg={12} className="d-none d-lg-block d-xl-none centered-lg">
-                            Joey Berger s
+                            Joey Berger
                             <div className="header-subtext">Software Engineer - Sound Designer - Composer - Guitarist</div>
                         </Col>
-                        <Col sm={12} className="d-none d-md-block d-lg-none centered-md">
+                        <Col md={12} className="d-none d-md-block d-lg-none centered-md">
                             Joey Berger
                             <div className="header-subtext-md">Software Engineer - Sound Designer - Composer - Guitarist</div>
                         </Col>
-                        <Col xs={{offset:1}} className="d-none d-sm-block d-md-none centered-sm">
+                        <Col sm={{offset:1}} className="d-none d-sm-block d-md-none centered-sm">
                             Joey Berger
                         </Col>
                         <Col xs={{offset:1}} className="d-none d-xs-block d-sm-none centered-sm">

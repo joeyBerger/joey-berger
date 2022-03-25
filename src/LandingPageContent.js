@@ -4,7 +4,6 @@ const landingPageContent = {
         listContent : [
             'Experience in React, Node JS, MongoDB, Swift, C++, C#, Python, Solidity.',
             'Software engineer in the gaming industry with 10 years experience, working for major manufacturers like IGT and Microgaming.',
-            // 'Designed math models for several successful slot games, including Lucky Clucks, 777 Mega Deluxe and The Incredible Balloon Machine',
             'Designed math models for several successful slot games.',
             'iOS developer for personal projects and clients. Guitar Mult and Old EKG among apps I have engineered.',
             'I love to build, run and test!',
