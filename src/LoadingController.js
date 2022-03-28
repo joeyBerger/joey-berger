@@ -6,7 +6,7 @@ import Loading from './Loading'
 
 const LoadingController = () => {
     const [loadedImages, incrementLoadedImage] = useState(0);
-    const totalImagesToLoad = 2
+    const totalImagesToLoad = 21
 
     const onLoad = () => incrementLoadedImage(loadedImages+1)
 
