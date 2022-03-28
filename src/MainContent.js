@@ -59,7 +59,7 @@ class MainContent extends React.Component {
         return(
         <div className="container-xs">
             <CustomNavbar scrollToDiv={this.scrollToDiv} setNavBarExpanded={this.setNavBarExpanded} expanded={this.state.expanded} categories={this.categories}/>
-            <Landing isMobile={isMobile}/>
+            <Landing isMobile={isMobile} mainImages={this.props.mainImages}/>
             <div className="scrollable-container">
                 {Object.keys(this.categories).map((c,i) => 
                     <CategoryComponent id={c} containerPadding={this.containerPadding} reactPlayerDimensions={this.state.reactPlayerDimensions} idx={i} key={c.substring(1)}/>

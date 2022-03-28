@@ -1,9 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
-import background from './images/landing/MainImage_NoJB.jpeg'
-import cutout from './images/landing/MainImage_Cutout.png'
 
-const Landing = (props) => {
+const Landing = props => {
     setTimeout(() => {
         const elem = document.getElementById('background-image')
         elem.classList.remove('shimmer');
@@ -14,8 +12,8 @@ const Landing = (props) => {
             <div className="image-container">
                 <div className = {`background-img ${props.isMobile ? 'mobile-source' : ''}`}>
                     <div style={{position:'fixed',height:'100%',width:'100%'}}>
-                        <img src={background} alt='background' className='landing-image shimmer' id='background-image'></img>
-                        <img src={cutout} alt='cutout' className={`landing-image landing-image-anim ${props.isMobile ? 'mobile-anim' : ''}`}></img>                        
+                        <img src={props.mainImages.background} alt='background' className='landing-image shimmer' id='background-image'></img>
+                        <img src={props.mainImages.cutout} alt='cutout' className={`landing-image landing-image-anim ${props.isMobile ? 'mobile-anim' : ''}`}></img>                        
                     </div>                     
                 </div>                
                 <Container className='title'>
