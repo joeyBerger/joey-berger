@@ -93,7 +93,7 @@ img {
   animation: shimmer 15s infinite;
 }
 
-.list-item-start {
+.comp-zero-opacity {
   opacity: 0;
 }
 

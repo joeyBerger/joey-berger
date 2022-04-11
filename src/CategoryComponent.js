@@ -33,7 +33,7 @@ const CategoryComponent = props => {
                         ? 
                             <Contact/>
                         :
-                            <>{props.id === 'links' ? <Links/> : <Stacks/>}</>
+                            <>{props.id === 'links' ? <Links doAnimation={doAnimation}/> : <Stacks/>}</>
                         }
                     </>
                     }
