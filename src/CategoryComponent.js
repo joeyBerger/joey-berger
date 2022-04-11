@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import { landingPageContent } from './LandingPageContent';
 import Stacks from './Stacks';
@@ -7,6 +7,17 @@ import Contact from './Contact';
 import MediaList from './MediaList';
 
 const CategoryComponent = props => {
+
+    const [hasAnimated,setHasAnimated] = useState(false)
+	
+	useEffect(() => {
+      if (!props.sectionsToAnimate.includes(props.id) && !hasAnimated) {
+        console.log('animating',props.id)
+		setHasAnimated(true)
+      }
+    }, [props.sectionsToAnimate])
+
+
     return (
         <Container fluid className={`info-container ${!(props.idx%2)?'white-background':''}`} id={props.id} style = {{padding:`${props.containerPadding}px`}}>
             <Row>
@@ -40,7 +51,6 @@ const CategoryComponent = props => {
             </Row>
         </Container>        
     )
-
 }
 
 export default CategoryComponent

@@ -93,6 +93,10 @@ img {
   animation: shimmer 15s infinite;
 }
 
+.text-anim {
+  animation: textFade ease 5s;
+}
+
 .landing-image-anim {
   position: absolute;
   top: 0px;
@@ -103,6 +107,11 @@ img {
 
 @keyframes shimmer {
   100% {-webkit-mask-position:left}
+}
+
+@keyframes textFade {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
 @keyframes scale {
@@ -186,11 +195,7 @@ img {
     background-color:rgb(87, 89, 91);
     z-index: 1;
     overflow-y: hidden;
-}   
-
-.jumbotron-override {
-    margin-bottom: 0px;
- }
+}
 
  .info-container {
      color: floralwhite;
@@ -199,11 +204,6 @@ img {
  .white-background {
      background-color: floralwhite;
      color: black;
- }
-
- .beige-background {
-    background-color: rgb(136, 140, 144);
-    color: black;
  }
 
  .form-group {

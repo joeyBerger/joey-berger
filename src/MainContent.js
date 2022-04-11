@@ -3,6 +3,8 @@ import { isMobile } from 'react-device-detect';
 import Landing from './Landing'
 import CategoryComponent from './CategoryComponent'
 import CustomNavbar from './CustomNavbar';
+import { categories } from './LandingPageContent';
+import { scrollEventController } from './ScrollEventController'
 
 class MainContent extends React.Component {
 
@@ -10,7 +12,8 @@ class MainContent extends React.Component {
         super(props)
         this.state = {
             expanded : false,
-            reactPlayerDimensions : this.returnReactPlayerDimensions()            
+            reactPlayerDimensions : this.returnReactPlayerDimensions(),
+            sectionsToAnimate : Object.keys(categories).map(c => c)
         }
         
         window.addEventListener('resize', () => {
@@ -20,14 +23,6 @@ class MainContent extends React.Component {
         });
 
         this.containerPadding = 50;
-        this.categories = {
-            software : 'Software Engineer',
-            sound : 'Composition/Sound Design',
-            guitar : 'Guitarist',
-            links : 'Links',
-            stacks : 'Stacks/Languages',
-            contact : 'Contact',
-        }
     }
 
     returnReactPlayerDimensions = () => {
@@ -55,14 +50,43 @@ class MainContent extends React.Component {
         this.setState(() => ({expanded}))
     }
 
-    render() {        
+    removeSectionFromAnimationList = id => {
+        this.setState((ps) => {
+            ps.sectionsToAnimate = ps.sectionsToAnimate.filter(k => k !== id)
+            return ps.sectionsToAnimate
+        })
+    }
+
+    render() {
+        // document.addEventListener('scroll',() => {
+        //     var sections = document.getElementsByClassName('info-container')
+        //     for (let i = 0; i < sections.length; i++) {
+        //         let section = sections[i]
+        //         if (section.offsetTop < window.innerHeight + window.scrollY && this.state.sectionsToAnimate.includes(section.id)) {
+        //             this.setState((ps) => {
+        //                 ps.sectionsToAnimate = ps.sectionsToAnimate.filter(k => k !== section.id)
+        //                 return ps.sectionsToAnimate
+        //             })
+        //         }
+        //     }
+        // })
+
+        // scrollEventController(this.state.sectionsToAnimate,this.removeSectionFromAnimationList)
+
         return(
         <div className="container-xs">
-            <CustomNavbar scrollToDiv={this.scrollToDiv} setNavBarExpanded={this.setNavBarExpanded} expanded={this.state.expanded} categories={this.categories}/>
+            <CustomNavbar scrollToDiv={this.scrollToDiv} setNavBarExpanded={this.setNavBarExpanded} expanded={this.state.expanded} categories={categories}/>
             <Landing isMobile={isMobile} mainImages={this.props.mainImages}/>
             <div className="scrollable-container">
-                {Object.keys(this.categories).map((c,i) => 
-                    <CategoryComponent id={c} containerPadding={this.containerPadding} reactPlayerDimensions={this.state.reactPlayerDimensions} idx={i} key={c.substring(1)}/>
+                {Object.keys(categories).map((c,i) => 
+                    <CategoryComponent 
+                        id={c} 
+                        containerPadding={this.containerPadding} 
+                        reactPlayerDimensions={this.state.reactPlayerDimensions} 
+                        idx={i} 
+                        key={c.substring(1)}
+                        sectionsToAnimate={this.state.sectionsToAnimate}
+                    />
                 )}
             </div>
         </div>

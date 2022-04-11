@@ -50,5 +50,14 @@ const landingPageContent = {
     }
 }
 
+const categories = {
+    software : 'Software Engineer',
+    sound : 'Composition/Sound Design',
+    guitar : 'Guitarist',
+    links : 'Links',
+    stacks : 'Stacks/Languages',
+    contact : 'Contact',
+}
 
-export {landingPageContent}
+
+export {landingPageContent, categories}
