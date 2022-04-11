@@ -93,8 +93,12 @@ img {
   animation: shimmer 15s infinite;
 }
 
+.list-item-start {
+  opacity: 0;
+}
+
 .text-anim {
-  animation: textFade ease 5s;
+  animation: textFade ease 2s;
 }
 
 .landing-image-anim {

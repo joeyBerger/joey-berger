@@ -5,16 +5,17 @@ import Stacks from './Stacks';
 import Links from './Links'
 import Contact from './Contact';
 import MediaList from './MediaList';
+import CategoryComponentList from './CategoryComponentList';
 
 const CategoryComponent = props => {
 
-    const [hasAnimated,setHasAnimated] = useState(false)
+    const [doAnimation,setDoAnimation] = useState(false)
 	
 	useEffect(() => {
-      if (!props.sectionsToAnimate.includes(props.id) && !hasAnimated) {
-        console.log('animating',props.id)
-		setHasAnimated(true)
-      }
+		if (!props.sectionsToAnimate.includes(props.id) && !doAnimation) {
+			console.log('animating',props.id)
+			setDoAnimation(true)
+		}
     }, [props.sectionsToAnimate])
 
 
@@ -25,20 +26,12 @@ const CategoryComponent = props => {
                     <h1>{landingPageContent[props.id].header}</h1>
                     {landingPageContent[props.id].listContent && typeof landingPageContent[props.id].listContent === 'object'
                     ?
-                        <ul>
-                            {landingPageContent[props.id].listContent.map(l => 
-                                l.includes('Guitar Mult') 
-                                ? 
-                                    <li key={l}>iOS developer for personal projects and clients. <a href='https://apps.apple.com/us/app/guitar-mult/id1533512980'>Guitar Mult</a> and <a href='https://apps.apple.com/us/app/old-ekg/id1448210793'>Old EKG</a> among apps I have engineered.</li>
-                                :
-                                    <li key ={l}>{l}</li>                                    
-                            )}
-                        </ul>                        
+						<CategoryComponentList landingPageContent={landingPageContent} id={props.id} doAnimation={doAnimation}/>
                     :
                     <>
                         {landingPageContent[props.id].listContent === 'contact' 
                         ? 
-                            <Contact/>                            
+                            <Contact/>
                         :
                             <>{props.id === 'links' ? <Links/> : <Stacks/>}</>
                         }

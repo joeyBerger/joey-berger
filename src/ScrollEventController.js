@@ -5,7 +5,6 @@ const scrollEventController = (sectionsToAnimate,cb) => {
             let section = sections[i]
             if (section.offsetTop < window.innerHeight + window.scrollY && sectionsToAnimate.includes(section.id)) {
                 cb(section.id)
-                console.log('section.id',section.id)
             }
         }
     })
