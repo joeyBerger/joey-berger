@@ -13,7 +13,6 @@ const CategoryComponent = props => {
 	
 	useEffect(() => {
 		if (!props.sectionsToAnimate.includes(props.id) && !doAnimation) {
-			console.log('animating',props.id)
 			setDoAnimation(true)
 		}
     }, [props.sectionsToAnimate])
@@ -33,7 +32,7 @@ const CategoryComponent = props => {
                         ? 
                             <Contact/>
                         :
-                            <>{props.id === 'links' ? <Links doAnimation={doAnimation}/> : <Stacks/>}</>
+                            <>{props.id === 'links' ? <Links doAnimation={doAnimation}/> : <Stacks doAnimation={doAnimation}/>}</>
                         }
                     </>
                     }
