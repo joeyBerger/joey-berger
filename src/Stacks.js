@@ -37,7 +37,4 @@ const Stacks = props => {
     )
 }
 
-
-
-
 export default Stacks
