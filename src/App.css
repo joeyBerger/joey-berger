@@ -98,17 +98,17 @@ img {
 }
 
 .component-alpha-anim {
-  animation: textFade ease 2s;
+  animation: textFade ease 2s forwards;
 }
 
 .header-anim {
-  -webkit-animation: moving 4s, textFade 4s;
-  animation: moving 4s, textFade 4s;
+  -webkit-animation: moving 4s, textFade ease 4s forwards;
+  animation: moving 4s, textFade ease 4s forwards;
 }
 
 @keyframes moving {
-  from {transform: translateY(30px);}
-  to {transform: translateY(0px);}
+  from {transform: translateY(30px) scale(1.05);}
+  to {transform: translateY(0px) scale(1);}
 }
 
 .landing-image-anim {

@@ -29,6 +29,7 @@ const CategoryComponent = props => {
         const elem = document.getElementsByClassName(`header-${props.id}`)[0]
         elem.classList.remove('component-alpha-anim');
         elem.classList.add('header-anim');
+        console.error('doing activate animation',props.id)
     }
 
     return (
