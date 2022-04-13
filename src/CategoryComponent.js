@@ -6,18 +6,24 @@ import Links from './Links'
 import Contact from './Contact';
 import MediaList from './MediaList';
 import CategoryComponentList from './CategoryComponentList';
+import { checkWindowHeight } from './ScrollEventController';
 
 const CategoryComponent = props => {
 
     const [doAnimation,setDoAnimation] = useState(false)
 	
 	useEffect(() => {
+        if (!doAnimation && props.id === 'software') {
+            if (checkWindowHeight()) {
+                setDoAnimation(true)
+            }
+            
+        }
+
 		if (!props.sectionsToAnimate.includes(props.id) && !doAnimation) {
 			setDoAnimation(true)
 		}
     }, [props.sectionsToAnimate])
-
-    console.log('landingPageContent[props.id].listContent',landingPageContent[props.id].listContent.length)
 
     return (
         <Container fluid className={`info-container ${!(props.idx%2)?'white-background':''}`} id={props.id} style = {{padding:`${props.containerPadding}px`}}>

@@ -10,4 +10,9 @@ const scrollEventController = (sectionsToAnimate,cb) => {
     })
 }
 
-export {scrollEventController}
+const checkWindowHeight = () => {
+    var section = document.getElementsByClassName('info-container')[0]
+    return section.offsetTop < window.innerHeight
+}
+
+export {scrollEventController,checkWindowHeight}

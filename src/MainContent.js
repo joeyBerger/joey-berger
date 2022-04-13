@@ -4,7 +4,7 @@ import Landing from './Landing'
 import CategoryComponent from './CategoryComponent'
 import CustomNavbar from './CustomNavbar';
 import { categories } from './LandingPageContent';
-import { scrollEventController } from './ScrollEventController'
+import { scrollEventController, checkWindowHeight } from './ScrollEventController'
 import { containerPadding } from './PresentationConfig'
 
 class MainContent extends React.Component {
