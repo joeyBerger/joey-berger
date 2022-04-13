@@ -19,7 +19,7 @@ const CategoryComponentList = props => {
             setTimeout(() => {
                 children[i].classList.add('component-alpha-anim')
                 children[i].classList.remove('comp-zero-opacity')
-            },i*fadeWaitTime.text)
+            },(i+1)*fadeWaitTime.text)
         }
     }
 

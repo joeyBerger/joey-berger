@@ -101,6 +101,16 @@ img {
   animation: textFade ease 2s;
 }
 
+.header-anim {
+  -webkit-animation: moving 4s, textFade 4s;
+  animation: moving 4s, textFade 4s;
+}
+
+@keyframes moving {
+  from {transform: translateY(30px);}
+  to {transform: translateY(0px);}
+}
+
 .landing-image-anim {
   position: absolute;
   top: 0px;

@@ -15,21 +15,27 @@ const CategoryComponent = props => {
 	useEffect(() => {
         if (!doAnimation && props.id === 'software') {
             if (checkWindowHeight()) {
+                activateHeaderAnimation()
                 setDoAnimation(true)
             }
-            
         }
-
 		if (!props.sectionsToAnimate.includes(props.id) && !doAnimation) {
+            activateHeaderAnimation()
 			setDoAnimation(true)
 		}
     }, [props.sectionsToAnimate])
+
+    const activateHeaderAnimation = () => {
+        const elem = document.getElementsByClassName(`header-${props.id}`)[0]
+        elem.classList.remove('component-alpha-anim');
+        elem.classList.add('header-anim');
+    }
 
     return (
         <Container fluid className={`info-container ${!(props.idx%2)?'white-background':''}`} id={props.id} style = {{padding:`${props.containerPadding}px`}}>
             <Row>
                 <Col md={{ span: 11, offset: 1 }}>
-                    <h1>{landingPageContent[props.id].header}</h1>
+                    <h1 className={`comp-zero-opacity header-${props.id}`}>{landingPageContent[props.id].header}</h1>
                     {landingPageContent[props.id].listContent && typeof landingPageContent[props.id].listContent === 'object'
                     ?
 						<CategoryComponentList landingPageContent={landingPageContent} id={props.id} doAnimation={doAnimation}/>
