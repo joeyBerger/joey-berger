@@ -97,7 +97,7 @@ img {
   opacity: 0;
 }
 
-.text-anim {
+.component-alpha-anim {
   animation: textFade ease 2s;
 }
 

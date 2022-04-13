@@ -5,6 +5,7 @@ import CategoryComponent from './CategoryComponent'
 import CustomNavbar from './CustomNavbar';
 import { categories } from './LandingPageContent';
 import { scrollEventController } from './ScrollEventController'
+import { containerPadding } from './PresentationConfig'
 
 class MainContent extends React.Component {
 
@@ -22,7 +23,7 @@ class MainContent extends React.Component {
             }))
         });
 
-        this.containerPadding = 50;
+        this.containerPadding = containerPadding;
 
         scrollEventController(this.state.sectionsToAnimate,this.removeSectionFromAnimationList)
     }

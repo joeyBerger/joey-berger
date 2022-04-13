@@ -1,6 +1,7 @@
 import React, {useEffect,useState} from 'react'
 import { Col } from 'react-bootstrap';
 import {linkImages,rows} from './LinksImages'
+import { fadeWaitTime } from './PresentationConfig'
 
 const Links = props => {
     
@@ -24,9 +25,9 @@ const Links = props => {
             const children = lists[i].children
             for (let j = 0; j < children.length; j++) {
                 setTimeout(() => {
-                    children[j].classList.add('text-anim')
+                    children[j].classList.add('component-alpha-anim')
                     children[j].classList.remove('comp-zero-opacity')
-                },k++*200)
+                },k++*fadeWaitTime.image)
             }
         }
     }

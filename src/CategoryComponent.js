@@ -17,6 +17,7 @@ const CategoryComponent = props => {
 		}
     }, [props.sectionsToAnimate])
 
+    console.log('landingPageContent[props.id].listContent',landingPageContent[props.id].listContent.length)
 
     return (
         <Container fluid className={`info-container ${!(props.idx%2)?'white-background':''}`} id={props.id} style = {{padding:`${props.containerPadding}px`}}>
@@ -37,7 +38,7 @@ const CategoryComponent = props => {
                     </>
                     }
                     {landingPageContent[props.id].mediaLinks && 
-                        <MediaList mediaLinks={landingPageContent[props.id].mediaLinks} reactPlayerDimensions={props.reactPlayerDimensions} />
+                        <MediaList mediaLinks={landingPageContent[props.id].mediaLinks} reactPlayerDimensions={props.reactPlayerDimensions} id={props.id} doAnimation={doAnimation} textListLength={landingPageContent[props.id].listContent.length}/>
                     }
                 </Col>
             </Row>

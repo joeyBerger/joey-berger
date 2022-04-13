@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import { fadeWaitTime } from './PresentationConfig';
 
 const CategoryComponentList = props => {
 
@@ -16,9 +17,9 @@ const CategoryComponentList = props => {
         const children = list.children
         for (let i = 0; i < children.length; i++) {
             setTimeout(() => {
-                children[i].classList.add('text-anim')
+                children[i].classList.add('component-alpha-anim')
                 children[i].classList.remove('comp-zero-opacity')
-            },i*100)
+            },i*fadeWaitTime.text)
         }
     }
 
