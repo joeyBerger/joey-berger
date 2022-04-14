@@ -98,12 +98,12 @@ img {
 }
 
 .component-alpha-anim {
-  animation: textFade ease 2s forwards;
+  animation: componentFade ease 2s forwards;
 }
 
 .header-anim {
-  -webkit-animation: moving 4s, textFade ease 4s forwards;
-  animation: moving 4s, textFade ease 4s forwards;
+  -webkit-animation: moving 4s, componentFade ease 4s forwards;
+  animation: moving 4s, componentFade ease 4s forwards;
 }
 
 @keyframes moving {
@@ -123,7 +123,7 @@ img {
   100% {-webkit-mask-position:left}
 }
 
-@keyframes textFade {
+@keyframes componentFade {
   0% {opacity:0;}
   100% {opacity:1;}
 }
