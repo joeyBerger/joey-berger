@@ -1,6 +1,6 @@
 import React, {useEffect,useState} from 'react'
 import { Col } from 'react-bootstrap';
-import {linkImages,rows} from './LinksImages'
+import {linkImages,rows,roundedImages} from './LinksImages'
 import { fadeWaitTime } from './PresentationConfig'
 
 const Links = props => {
@@ -36,8 +36,8 @@ const Links = props => {
         <s>
             {rows.map((row,i) => 
                 <Col md={{ span: 11, offset: 2 }} className='d-flex justify-content-start link-container' style={i ? {marginTop:'40px'} : {}} key={linkImages[row[0]].alt}>
-                    {row.map(img => <img className='comp-zero-opacity' src={img} alt={linkImages[img].alt} key={linkImages[img].link} onClick={(e) => {openTab(e,linkImages[img].link)}}></img>)}
-                </Col>                
+                    {row.map(img => <img className={`comp-zero-opacity ${roundedImages.includes(linkImages[img].alt) ? 'round-image' : ''}`} src={img} alt={linkImages[img].alt} key={linkImages[img].link} onClick={(e) => {openTab(e,linkImages[img].link)}}></img>)}
+                </Col>               
             )}
         </s>
     )

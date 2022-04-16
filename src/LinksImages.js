@@ -16,4 +16,10 @@ const rows = [
     [guitarMult,oldEKG],
 ]
 
-export {linkImages,rows}
+const roundedImages = [
+    linkImages[unr].alt,
+    linkImages[guitarMult].alt,
+    linkImages[oldEKG].alt
+]
+
+export {linkImages,rows,roundedImages}
