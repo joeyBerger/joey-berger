@@ -30,7 +30,7 @@ const Stacks = props => {
         <>
             {rows.map(row => 
                 <Col md={{ span: 11, offset: 2 }} className='d-flex justify-content-start stack-container' key={stackImages[row[0]].substr(1)}>
-                    {row.map(logo => <img className='comp-zero-opacity' src={logo} alt={stackImages[logo]} key={stackImages[logo]}></img>)}
+                    {row.map(logo => <img className='comp-zero-opacity' src={logo} alt={stackImages[logo]} key={stackImages[logo]} style={{cursor:'default'}}></img>)}
                 </Col>
             )}
         </>
