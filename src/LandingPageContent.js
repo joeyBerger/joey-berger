@@ -33,7 +33,13 @@ const landingPageContent = {
         header : 'Guitarist/Teacher',
         listContent : [
             'Professional musician for 17 years, playing across the US as a hired musician.',
-            'Adjunct Faculty at the University of Nevada, Reno for 12 years.'
+            'Adjunct Faculty at the, University of Nevada, Reno for 12 years.'
+        ],
+        mediaLinks : [
+            'https://www.youtube.com/watch?v=rjuUOXLUM5M',
+            'https://www.youtube.com/watch?v=OpPCEGxFrz4',
+            'https://www.youtube.com/watch?v=Nl-BJF-GUhg',
+            'https://www.youtube.com/watch?v=2z4JbyJhoig',
         ]
     },
     links : {
@@ -61,3 +67,14 @@ const categories = {
 
 
 export {landingPageContent, categories}
+
+
+
+
+/*
+https://www.youtube.com/watch?v=rjuUOXLUM5M
+https://www.youtube.com/watch?v=OpPCEGxFrz4
+https://www.youtube.com/watch?v=Nl-BJF-GUhg
+https://www.youtube.com/watch?v=2z4JbyJhoig
+
+*/
