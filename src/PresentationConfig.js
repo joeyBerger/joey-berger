@@ -1,8 +1,8 @@
 const containerPadding = 50
 const fadeWaitTime = {
-  text : 100+200,
-  media : 100+300,
-  image : 150+200,
+  text : 200,
+  media : 200,
+  image : 250,
 }
 
 export {containerPadding, fadeWaitTime}
