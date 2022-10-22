@@ -11,7 +11,7 @@ const landingPageContent = {
         mediaLinks : [
             'https://www.youtube.com/watch?v=lE82TdaYKkQ',
             'https://www.youtube.com/watch?v=Fwn1hTJ-05w&t',
-            'https://www.youtube.com/watch?v=CI4QAZSd-8w&t',
+            'https://www.youtube.com/watch?v=B-RiFH-C6us',
             'https://www.youtube.com/watch?v=a2kD_QdWtaI&t',
         ]
     },
