@@ -33,7 +33,7 @@ const landingPageContent = {
         header : 'Guitarist/Teacher',
         listContent : [
             'Professional musician for 17 years, playing across the US as a hired musician.',
-            'Adjunct Faculty at the, University of Nevada, Reno for 12 years.'
+            'Adjunct Faculty at the University of Nevada, Reno for 14 years.'
         ],
         mediaLinks : [
             'https://www.youtube.com/watch?v=rjuUOXLUM5M',
