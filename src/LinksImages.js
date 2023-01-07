@@ -12,12 +12,12 @@ linkImages[guitarMult] = {alt : 'guitarMult', link: 'https://apps.apple.com/us/a
 linkImages[oldEKG] = {alt : 'oldEKG', link: 'https://apps.apple.com/us/app/old-ekg/id1448210793/'}
 
 const rows = [
-    [github,linkedin,unr],
+    [github,linkedin],
     [guitarMult,oldEKG],
 ]
 
 const roundedImages = [
-    linkImages[unr].alt,
+    // linkImages[unr].alt,
     linkImages[guitarMult].alt,
     linkImages[oldEKG].alt
 ]
