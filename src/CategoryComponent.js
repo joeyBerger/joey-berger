@@ -32,7 +32,7 @@ const CategoryComponent = props => {
     }
 
     return (
-        <Container fluid className={`info-container ${!(props.idx%2)?'white-background':''}`} id={props.id} style = {{padding:`${props.containerPadding}px`}}>
+        <Container fluid className={`info-container ${!(props.idx%2)?'border-section':''}`} id={props.id} style = {{padding:`${props.containerPadding}px`,color:props.id==='guitar'?'white':''}}>
             <Row>
                 <Col md={{ span: 11, offset: 1 }}>
                     <h1 className={`comp-zero-opacity header-${props.id}`}>{landingPageContent[props.id].header}</h1>

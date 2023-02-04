@@ -44,7 +44,7 @@ img {
 }
 
 .loading-container {
-  background-color:rgb(87, 89, 91);
+  background-color: #282c34;
   height:100vh;
 }
 
@@ -80,6 +80,22 @@ img {
   min-height: 100%;
   z-index: -1;
   object-fit: cover;
+}
+
+@-webkit-keyframes gradient-anim {
+  0%{background-position:0% 100%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes gradient-anim {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes gradient-anim {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 .shimmer {
@@ -207,17 +223,28 @@ img {
 .scrollable-container {
     height:100%;
     background-color:rgb(87, 89, 91);
+    /* background: radial-gradient(circle, rgba(48,48,48,1) 0%, rgba(107,107,107,1) 53%, rgba(80,80,80,1) 64%, rgba(167,167,167,1) 85%); */
+    background: radial-gradient(circle, rgba(48,48,48,1) 0%, rgba(52,52,52,1) 41%, rgba(222,222,222,1) 67%, rgba(167,167,167,1) 88%);
+    background-size: 120% 120%;
     z-index: 1;
     overflow-y: hidden;
+    /* animation: gradient-fade 5s, fa  deIn ease 1s; */
+    -webkit-animation: gradient-anim 10s ease infinite;
+    -moz-animation: gradient-anim 10s ease infinite;
+    animation: gradient-anim 10s ease infinite;
 }
 
  .info-container {
      color: floralwhite;
  }
 
- .white-background {
-     background-color: floralwhite;
-     color: black;
+ .border-section {
+     /* background-color: floralwhite; */
+     border-radius: 5px;
+     border-style: solid;
+     border-width: 1px;
+     border-color: rgb(79, 79, 79);
+     color: rgb(57, 57, 57);
  }
 
  .form-group {
